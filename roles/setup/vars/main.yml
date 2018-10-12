@@ -1,0 +1,28 @@
+---
+# list of applications to install
+general:
+  local_home: "{{ lookup('env','HOME') }}"
+
+# homebrew applications
+applications:
+  - docker-compose
+  - git
+  - nvm
+  - vim
+  - zsh
+
+# homebrew cask applications
+cask_applications:
+# - android-studio
+  - dbeaver-community
+  - docker
+# - filezilla
+  - franz
+  - gitkraken
+  - google-chrome
+  - intellij-idea-ce
+  - iterm2
+  - java8
+  - spotify
+  - visual-studio-code
+  - vlc

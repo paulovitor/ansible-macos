@@ -1,0 +1,27 @@
+---
+# doing configuration
+
+- name: setting up zsh with oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  become: yes
+
+- name: getting dracula theme for oh-my-zsh
+  git:
+    repo: https://github.com/dracula/zsh.git
+    dest: "{{general.local_home}}/.oh-my-zsh_dracula_theme"
+
+- name: getting material-design theme for oh-my-zsh
+  git:
+    repo: https://github.com/MartinSeeler/iterm2-material-design
+    dest: "{{general.local_home}}/.oh-my-zsh_material-design_theme"
+
+- name: sym linking oh-my-zsh dracula theme
+  file:
+    src: "{{general.local_home}}/.oh-my-zsh_dracula_theme/dracula.zsh-theme"
+    dest: "{{general.local_home}}/.oh-my-zsh/themes/dracula.zsh-theme"
+    state: link
+
+- name: zsh dot file
+  copy:
+    src: .zshrc 
+    dest: "{{general.local_home}}/.zshrc"
