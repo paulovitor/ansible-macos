@@ -1,2 +1,2 @@
 # ansible-macos
-Setup application macos environment
+Setup applications to macos environment
