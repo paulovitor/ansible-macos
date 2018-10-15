@@ -13,16 +13,28 @@ applications:
 
 # homebrew cask applications
 cask_applications:
-# - android-studio
+  - android-studio
   - dbeaver-community
   - docker
-# - filezilla
   - franz
   - gitkraken
   - google-chrome
   - intellij-idea-ce
   - iterm2
   - java8
+  - ngrok
   - spotify
   - visual-studio-code
   - vlc
+  - zoomus
+
+# manual download applications
+downloads:
+  fortclient:
+    name: Fortclient 6.0.1
+    url: https://filestore.fortinet.com/forticlient/downloads/FortiClientOnlineInstaller_6.0.1.dmg
+    dest: "{{general.local_home}}/Downloads/FortiClientOnlineInstaller_6.0.1.dmg"
+  tomcat:
+    name: Tomcat 8.5.34
+    url: http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.zip
+    dest: "{{general.local_home}}/Downloads/apache-tomcat-8.5.34.zip"
