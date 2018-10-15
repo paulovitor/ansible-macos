@@ -7,6 +7,7 @@ general:
 applications:
   - docker-compose
   - git
+  - maven
   - nvm
   - vim
   - zsh
