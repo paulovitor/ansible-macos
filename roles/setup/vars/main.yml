@@ -7,6 +7,7 @@ general:
 applications:
   - docker-compose
   - git
+  - git-flow
   - maven
   - md5sha1sum
   - nvm
