@@ -19,6 +19,7 @@ applications:
 # homebrew cask applications
 cask_applications:
   - android-studio
+  - apache-directory-studio
   - dbeaver-community
   - docker
   - franz
