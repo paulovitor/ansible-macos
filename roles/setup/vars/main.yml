@@ -45,8 +45,8 @@ downloads:
     url: https://filestore.fortinet.com/forticlient/downloads/FortiClientOnlineInstaller_6.0.1.dmg
     dest: "{{general.local_home}}/Downloads/.ansible/tmp/FortiClientOnlineInstaller_6.0.1.dmg"
   qgis:
-    name: QGIS 3.4.2
-    url: http://qgis.org/downloads/macOS/QGIS-macOS-3.4.2-1.dmg
+    name: QGIS 2.18 (Required 2.7 python)
+    url: http://qgis.org/downloads/macOS/QGIS-OSX-2.18.27-1.dmg
     dest: "{{general.local_home}}/Downloads/.ansible/tmp/QGIS-macOS-3.4.2-1.dmg"
   tomcat:
     name: Tomcat 8.5.34
