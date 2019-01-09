@@ -34,6 +34,7 @@ cask_applications:
   - ngrok
   - postman
   - spotify
+  - p7zip
   - visual-studio-code
   - vlc
   - zoomus
