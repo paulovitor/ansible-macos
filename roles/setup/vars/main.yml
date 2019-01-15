@@ -23,6 +23,7 @@ applications:
 cask_applications:
   - android-studio
   - apache-directory-studio
+  - anki
   - dbeaver-community
   - docker
   - franz
