@@ -25,10 +25,15 @@ echo "==========================================="
 echo "		Setting up your mac using ansible"
 echo "==========================================="
 
-sudo easy_install pip
-sudo pip install ansible
+xcode-select --install
 
-ansible-playbook -i ./hosts playbook.yml --verbose
+sudo easy_install pip
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install ansible
+
+ansible-playbook -i hosts playbook.yml --verbose
 
 echo "==========================================="
 echo "		Finish environment configuration "

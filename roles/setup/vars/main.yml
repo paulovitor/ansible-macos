@@ -5,52 +5,45 @@ general:
 
 # homebrew applications
 applications:
+  - docker
   - docker-compose
+  - dotnet
   - git
-  - git-flow
-  - maven
-  - md5sha1sum
   - nvm
-  - openvpn
-  - pyenv
-  - python3
-  - unrar
+  - openconnect
+  - p7zip
+  - ssh-copy-id
   - vim
-  - zlib
+  - yarn
   - zsh
 
 # homebrew cask applications
 cask_applications:
-  - android-studio
-  - apache-directory-studio
   - anki
   - dbeaver-community
-  - docker
   - franz
   - gitkraken
   - google-chrome
   - intellij-idea-ce
   - iterm2
-  - java8
   - ngrok
   - postman
   - spotify
-  - p7zip
+  - slack
   - visual-studio-code
   - vlc
-  - zoomus
+  - zoom
 
 # manual download applications
 downloads:
-  fortclient:
-    name: Fortclient 6.0.1
-    url: https://filestore.fortinet.com/forticlient/downloads/FortiClientOnlineInstaller_6.0.1.dmg
-    dest: "{{general.local_home}}/Downloads/.ansible/tmp/FortiClientOnlineInstaller_6.0.1.dmg"
-  qgis:
-    name: QGIS 2.18 (Required 2.7 python)
-    url: http://qgis.org/downloads/macOS/QGIS-OSX-2.18.27-1.dmg
-    dest: "{{general.local_home}}/Downloads/.ansible/tmp/QGIS-macOS-3.4.2-1.dmg"
   tomcat:
-    name: Tomcat 8.5.34
-    url: http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.zip
-    dest: "{{general.local_home}}/Downloads/.ansible/tmp/apache-tomcat-8.5.34.zip"
+    name: Tomcat 8.5.69
+    url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.zip
+    dest: "{{general.local_home}}/Downloads/apache-tomcat-8.5.34.zip"
+
+#sdkman
+sdkman_script_install_url: http://get.sdkman.io
+sdkman_folder: '{{general.local_home}}/.sdkman'
+gradle_version: 3.5
+java_version: 11.0.11.hs-adpt
+maven_version: 3.5.0

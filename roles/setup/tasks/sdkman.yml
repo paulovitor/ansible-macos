@@ -1,0 +1,24 @@
+---
+
+- name: Check if sdkman is installed
+  shell: test -d {{sdkman_folder}} && echo "yes" || echo "no"
+  register: is_sdkman_installed
+
+- name: Install SDKMAN!
+  when: is_sdkman_installed.stdout == "no"
+  shell: curl -s {{sdkman_script_install_url}} | bash executable=/bin/bash
+
+- name: Ensure presence of bashrc
+  file: state=touch path={{general.local_home}}/.bashrc
+
+- name: Add sdkman in .bashrc
+  lineinfile: dest={{general.local_home}}/.bashrc regexp="\/.sdkman/bin\/sdkman\-init\.sh" line='[[ -s "{{sdkman_folder}}/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "{{sdkman_folder}}/bin/sdkman-init.sh"'
+
+- name: Installing gradle
+  command: bash -lc "sdk install gradle {{gradle_version}}"
+
+- name: Installing java
+  command: bash -lc "sdk install java {{java_version}}"
+
+- name: Installing maven
+  command: bash -lc "sdk install maven {{maven_version}}"
