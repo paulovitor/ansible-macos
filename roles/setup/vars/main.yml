@@ -26,10 +26,12 @@ cask_applications:
   - google-chrome
   - intellij-idea-ce
   - iterm2
+  - libreoffice
   - ngrok
   - postman
   - spotify
   - slack
+  - sourcetree
   - visual-studio-code
   - vlc
   - zoom
