@@ -5,13 +5,12 @@ general:
 
 # homebrew applications
 applications:
-  - docker
   - docker-compose
   - dotnet
   - git
   - nvm
+  - nuget
   - openconnect
-  - p7zip
   - ssh-copy-id
   - vim
   - yarn
@@ -22,12 +21,15 @@ cask_applications:
   - anki
   - dbeaver-community
   - franz
+  - github
   - gitkraken
   - google-chrome
   - intellij-idea-ce
   - iterm2
+  - keka
   - libreoffice
   - ngrok
+  - pritunl
   - postman
   - spotify
   - slack
@@ -38,10 +40,14 @@ cask_applications:
 
 # manual download applications
 downloads:
-  tomcat:
-    name: Tomcat 8.5.69
-    url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.zip
-    dest: "{{general.local_home}}/Downloads/apache-tomcat-8.5.34.zip"
+  docker:
+    name: Docker Mac with intel chip
+    url: https://desktop.docker.com/mac/main/amd64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-amd64
+    dest: "{{general.local_home}}/Downloads/"
+  visualstudio:
+    name: Visual Studio Professional 2022 Preview
+    url: https://aka.ms/vs/mac/2022-preview
+    dest: "{{general.local_home}}/Downloads/"
 
 #sdkman
 sdkman_script_install_url: http://get.sdkman.io
