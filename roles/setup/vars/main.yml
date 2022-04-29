@@ -8,6 +8,8 @@ applications:
   - docker-compose
   - dotnet
   - git
+  - gitmoji
+  - graphviz
   - nvm
   - nuget
   - openconnect
@@ -18,6 +20,7 @@ applications:
 
 # homebrew cask applications
 cask_applications:
+  - android-file-transfer
   - anki
   - dbeaver-community
   - franz
