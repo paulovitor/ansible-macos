@@ -27,7 +27,11 @@ echo "==========================================="
 
 xcode-select --install
 
-sudo easy_install pip
+# sudo easy_install pip
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+python3 get-pip.py
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 

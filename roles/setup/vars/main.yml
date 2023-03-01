@@ -5,6 +5,7 @@ general:
 
 # homebrew applications
 applications:
+  - colima
   - docker-compose
   - dotnet
   - git
@@ -23,7 +24,6 @@ cask_applications:
   - android-file-transfer
   - anki
   - dbeaver-community
-  - franz
   - github
   - gitkraken
   - google-chrome
@@ -32,7 +32,6 @@ cask_applications:
   - keka
   - libreoffice
   - ngrok
-  - pritunl
   - postman
   - spotify
   - slack
@@ -53,8 +52,8 @@ downloads:
     dest: "{{general.local_home}}/Downloads/"
 
 #sdkman
-sdkman_script_install_url: http://get.sdkman.io
+sdkman_script_install_url: https://get.sdkman.io
 sdkman_folder: '{{general.local_home}}/.sdkman'
 gradle_version: 3.5
-java_version: 11.0.11.hs-adpt
+java_version: 17.0.5-oracle
 maven_version: 3.5.0
